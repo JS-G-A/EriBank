@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bank</title>
+    <style>
+      span {
+        color: rgb(0, 195, 255);
+        font-weight: 500;
+        animation-name: example;
+        animation-duration: 8s;
+      }
+
+      @keyframes example {
+        0% {
+          color: rgb(0, 195, 255);
+        }
+        50% {
+          color: rgb(23, 75, 107);
+        }
+      }
+      header h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 3rem;
+      }
+      section {
+        background-color: rgb(222, 222, 176);
+        padding: 3rem;
+        margin: 3rem 14rem;
+        width: 70vw;
+      }
+      section h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      section input {
+        border: 1px solid gray;
+        padding: 0.5rem;
+        margin-bottom: 1.3rem;
+        width: 70%;
+        display: block;
+      }
+      section button {
+        background-color: rgb(7, 116, 116);
+        font-weight: bold;
+        padding: 0.5rem;
+        width: 10%;
+        color: white;
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <h2>Welcome to <span>Eri Bank</span></h2>
+    </header>
+<!-- main -->
+    <main>
+      <section>
+        <h4>Please login</h4>
+        <div>
+          <input
+            id="user-email"
+            type="text"
+            placeholder="your email"
+            required
+          />
+          <input
+            id="user-password"
+            type="password"
+            name=""
+            id=""
+            placeholder="your password"
+            required
+          />
+          <button id="login-submit">SUBMIT</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
