@@ -279,23 +279,24 @@ function populateTables(){
     <td>Cash</td>
     <td>AC-12345</td>
     <td>10547</td>`
-    // tr2.innerHTML =  ` 
-    // <td>02/05/2024</td>
-    // <td>Withdraw</td>
-    // <td>47</td>
-    // <td>${secode}</td>
-    // <td>${target}</td>
-    // <td>10500</td>`
+     let tr2 = document.createElement('tr');
+    tr2.innerHTML =  ` 
+    <td>02/05/2024</td>
+    <td>Withdraw</td>
+    <td>47</td>
+    <td>Cash</td>
+    <td>AC-12345</td>
+    <td>10500</td>`
     let tr3 = document.createElement('tr');
     tr3.innerHTML =  ` 
     <td>05/05/2024</td>
     <td>Deposit</td>
-    <td>100</td>
+    <td>47</td>
     <td>Cash</td>
     <td>AC-12345</td>
-    <td>10600</td>`
+    <td>10547</td>`
     table.appendChild(tr1)
-    // table.appendChild(tr2)
+     table.appendChild(tr2)
     table.appendChild(tr3)
    }
 
