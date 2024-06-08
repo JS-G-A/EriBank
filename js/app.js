@@ -104,9 +104,67 @@ function deposit(){
 // tranfer   
 function tranfer(){
 
-   
+     let btnTransfer = document.querySelector("#btn-t");
+     btnTransfer.addEventListener("click", function () {
+       let accountNumber = document.querySelector("#search").value;
+       let custmer = usersList.find((user) => user.accounts.get(accountNumber));
 
+       let sourceAccount = document.querySelector("#source-account").value;
+        let targetAccount = document.querySelector("#destination-account").value;
+       let Amounts = document.querySelector("#transferAmount").value;
 
+       let Balance = document.querySelector("#balance").innerHTML;
+       Balance.innerHTML =
+         parseInt(Balance.innerHTML == "" ? 0 : Balance.innerHTML) -
+         parseInt(Amounts == "" ? 0 : Amounts);
+
+       let result = Balance - Amounts;
+       let totalAmount = result;
+       accountNumber = totalAmount;
+
+       let table = document.querySelector("table");
+       let tr = document.createElement("tr");
+       if (Amounts > 0) {
+         let td1 = document.createElement("td");
+         let td2 = document.createElement("td");
+         let td3 = document.createElement("td");
+         let td4 = document.createElement("td");
+         let td5 = document.createElement("td");
+         let td6 = document.createElement("td");
+
+         td1.innerText = new Date().toLocaleDateString("en-NL", {
+           day: "2-digit",
+           month: "2-digit",
+           year: "numeric",
+           timeZone: "Europe/Amsterdam",
+         });
+         td2.innerText = "Transfer";
+         td3.textContent = Amounts;
+         td4.innerText = sourceAccount;
+         td5.innerText = targetAccount;
+         td6.textContent = Balance - Amounts;
+
+         tr.appendChild(td1);
+         tr.appendChild(td2);
+         tr.appendChild(td3);
+         tr.appendChild(td4);
+         tr.appendChild(td5);
+         tr.appendChild(td6);
+
+         table.appendChild(tr);
+       } else {
+         alert("Please enter a valid amount");
+       }
+
+       let balance = document.querySelector("#balance");
+       balance.innerHTML =
+         parseInt(balance.innerHTML == "" ? 0 : balance.innerHTML) -
+         parseInt(Amounts == "" ? 0 : Amounts);
+
+       let resultIncrese = balance + Amounts;
+       let totalIncrese = resultIncrese;
+       accountNumber = totalIncrese;
+     });
 }
 
 //withdraw
