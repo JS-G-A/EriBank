@@ -182,34 +182,62 @@ let table = document.querySelector('table')
 function populateTables(){
     let  accountNumber = document.querySelector('#search').value;
 
-   if(accountNumber){
+   if(accountNumber == 'AC12312'){
     let table = document.querySelector('table');
     let tr1 = document.createElement('tr');
     tr1.innerHTML =  ` 
     <td>01/05/2024</td>
     <td>Deposit</td>
-    <td>15000</td>
+    <td>5000</td>
     <td>Cash</td>
-    <td>AC-123456</td>
-    <td>15000</td>`
+    <td>AC-12312</td>
+    <td>5000</td>`
     let tr2 = document.createElement('tr');
     tr2.innerHTML =  ` 
     <td>02/05/2024</td>
-    <td>Transfer</td>
-    <td>2000</td>
-    <td>AC-123456</td>
-    <td>AC-123457</td>
-    <td>13000</td>`
+    <td>Withdraw</td>
+    <td>3000</td>
+    <td>Cash</td>
+    <td>AC-12312</td>
+    <td>3000</td>`
     let tr3 = document.createElement('tr');
     tr3.innerHTML =  ` 
     <td>05/05/2024</td>
     <td>Deposit</td>
-    <td>2000</td>
+    <td>3000</td>
     <td>Cash</td>
-    <td>AC-123456</td>
-    <td>15000</td>`
+    <td>AC-12312</td>
+    <td>5000</td>`
     table.appendChild(tr1)
     table.appendChild(tr2)
+    table.appendChild(tr3)
+   }else if(accountNumber == 'AC12345'){
+    let table = document.querySelector('table');
+    let tr1 = document.createElement('tr');
+    tr1.innerHTML =  ` 
+    <td>01/05/2024</td>
+    <td>Deposit</td>
+    <td>10547</td>
+    <td>Cash</td>
+    <td>AC-12345</td>
+    <td>10547</td>`
+    // tr2.innerHTML =  ` 
+    // <td>02/05/2024</td>
+    // <td>Withdraw</td>
+    // <td>47</td>
+    // <td>${secode}</td>
+    // <td>${target}</td>
+    // <td>10500</td>`
+    let tr3 = document.createElement('tr');
+    tr3.innerHTML =  ` 
+    <td>05/05/2024</td>
+    <td>Deposit</td>
+    <td>100</td>
+    <td>Cash</td>
+    <td>AC-12345</td>
+    <td>10600</td>`
+    table.appendChild(tr1)
+    // table.appendChild(tr2)
     table.appendChild(tr3)
    }
 
